@@ -14,30 +14,26 @@
                     placeholder="Sähköposti" />
             </div>
 
-                        <div>
+            <div>
                 <label for="password">Salasana: </label>
-                <input type="password" name="kayttaja_salasana_varmistus" id="kayttaja_salasana_varmistus"
-                    class="form-control" placeholder="Salasana uudelleen" />
+                <input type="password" name="kayttaja_salasana" id="kayttaja_salasana" class="form-control"
+                    placeholder="Salasana" />
             </div>
-
             <div>
                 <label for="password">Salasana: </label>
                 <input type="password" name="kayttaja_salasana_varmistus" id="kayttaja_salasana_varmistus"
                     class="form-control" placeholder="Salasana uudelleen" />
             </div>
 
+
             <button type="submit" class="button">Rekisteröidy</button>
 
-
-
-                </form>
+        </form>
     </div>
-    <div>
+        <div>
         {{#if message}}
         <h4 class="alert">{{message}}</h4>
         {{/if}}
     </div>
-</div>
 
-    </div>
 </div>

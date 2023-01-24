@@ -4,7 +4,9 @@ import dotenv from 'dotenv';
 import { create } from 'express-handlebars';
 import pages from './routes/page.routes.js';
 import register from './routes/register.routes.js';
-
+import auth from './routes/auth.routes.js';
+import cookieParser from 'cookie-parser';
+import hbsHelpers from './helpers/handlebars-helpers.js';
 
 
 dotenv.config();
@@ -18,22 +20,30 @@ const db = mysql.createConnection({
     database: process.env.DATABASE
 });
 
+
+
 app.use(express.static('public'));
 
-const hbs = create({ extname: '.hbs'});
-
-app.engine('hbs', hbs.engine);
+const hbs = create({
+    extname: '.hbs',
+    helpers: hbsHelpers
+});
 
 app.set('view engine', 'hbs');
 
 app.use(urlencoded({ extended: false }));
 
+app.engine('hbs', hbs.engine);
+
 app.use(json());
+
+app.use(cookieParser());
 
 app.use('/', pages);
 
 app.use('/register', register);
 
+app.use('/auth', auth);
 
 
 app.get('/', (req, res) => {
