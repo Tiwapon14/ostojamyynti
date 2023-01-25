@@ -124,6 +124,7 @@ const deleteAdvert = async (req, res, next) => {
     }
 };
 
+
 export default newAdvert;
 export { listAdverts, listUserAdverts, getAdvert, updateAdvert, deleteAdvert };
 

@@ -17,7 +17,7 @@ const login = async (req, res) => {
             [kayttaja_sahkoposti],
             async (error, results) => {
                 if (
-                    !results ||
+                    !results[0] ||
                     !(await bcrypt.compare(
                         kayttaja_salasana,
                         results[0].kayttaja_salasana
@@ -76,6 +76,7 @@ const login = async (req, res) => {
             expires: new Date(Date.now() + 2 * 1000),
             httpOnly: true,
         });
+        res.clearCookie('jwt');
         res.status(200).redirect('/');
     };
     

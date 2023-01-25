@@ -2,17 +2,17 @@ import db from '../app.js';
 import bcrypt from 'bcryptjs';
 
 const registerUser = (req, res) => {
-    // const kayttaja_tunnus = req.body.kayttaja_tunnus;
-    // const kayttaja_sahkoposti = req.body.kayttaja_sahkoposti;
-    // const kayttaja_salasana = req.body.kayttaja_salasana;
-    // const kayttaja_salasana_varmistus = req.body.kayttaja_salasana_varmistus;
+    const kayttaja_tunnus = req.body.kayttaja_tunnus;
+    const kayttaja_sahkoposti = req.body.kayttaja_sahkoposti;
+    const kayttaja_salasana = req.body.kayttaja_salasana;
+    const kayttaja_salasana_varmistus = req.body.kayttaja_salasana_varmistus;
 
-    const {
+   /* const {
         kayttaja_tunnus,
         kayttaja_sahkoposti,
         kayttaja_salasana,
         kayttaja_salasana_varmistus,
-    } = req.body;
+    } = req.body;*/
 
     db.query(
         "SELECT kayttaja_sahkoposti FROM kayttajat WHERE kayttaja_sahkoposti = ?",

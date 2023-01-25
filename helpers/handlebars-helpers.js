@@ -46,5 +46,4 @@ let hbsHelpers = {
 }
 
 
-
 export default hbsHelpers;
