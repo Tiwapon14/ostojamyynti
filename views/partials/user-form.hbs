@@ -1,0 +1,21 @@
+<div class="universalForm">
+    <div class="container">
+        <div class="itemA">
+            <label for="userName">Käyttäjätunnus: </label>
+        </div>
+        <div class="itemB">
+            <input type="text" class="form-control" id="kayttaja_tunnus" name="kayttaja_tunnus"
+                placeholder="Käyttäjätunnus" value="{{user.kayttaja_tunnus}}" />
+        </div>
+        <div class="itemA">
+            <label for="email">Sähköposti: </label>
+        </div>
+        <div class="itemB">
+            <input type="email" class="form-control" id="kayttaja_sahkoposti" name="kayttaja_sahkoposti"
+                placeholder="Sähköposti" value="{{user.kayttaja_sahkoposti}}" />
+        </div>
+        <div class="editUserButton">
+            <button type="submit" class="button">Tallenna</button>
+        </div> 
+    </div>
+</div>
