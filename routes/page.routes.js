@@ -100,4 +100,5 @@ routes.get('/editUser/:id', [isLoggedIn, editUser], (req, res) => {
     })
   });
 
+
 export default  routes;
