@@ -1,4 +1,4 @@
-# Osto ja myyntti
+# Osto ja myynti
 
 # Tämä projekti käyttää: 
 Node, view engine hbs, XAMPP ja handlebar.
